@@ -1,0 +1,13 @@
+<div class="modal-excluir">
+  <div class="modal-header">
+    <h2 class="modal-title">Excluir</h2>
+    <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <p>Tem certeza que deseja excluir este registro?</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-secondary" (click)="activeModal.close('Close click')">Cancelar</button>
+    <button type="button" class="btn btn-primary" (click)="excluir()">Excluir</button>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+<div class="modal-incluir">
+    <div class="modal-header">
+      <h2 class="modal-title" *ngIf="!edicao">Incluir</h2>
+      <h2 class="modal-title" *ngIf="edicao">Editar</h2>
+      <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss()"></button>
+    </div>
+    <div class="modal-body">
+      <form [formGroup]="formulario">
+        <div class="form-group mb-3">
+          <label for="nome">Nome*</label>
+          <input 
+            type="text" 
+            class="form-control" 
+            id="nome" 
+            aria-describedby="nome" 
+            placeholder="Digite Aqui"
+            formControlName="nome"
+            maxlength="50"
+          >
+          <small *ngIf="formulario.get('nome')?.touched && formulario.get('nome')?.invalid" class="texto-erro">*Campo obrigatório</small>
+        </div>
+        <div class="form-group mb-3">
+          <label for="descricao">Descrição*</label>
+          <textarea 
+            type="text" 
+            class="form-control" 
+            id="descricao" 
+            aria-describedby="descricao" 
+            placeholder="Digite Aqui"
+            formControlName="descricao"
+            maxlength="100"
+          >
+          </textarea>
+          <small *ngIf="formulario.get('descricao')?.touched && formulario.get('descricao')?.invalid" class="texto-erro">*Campo obrigatório</small>
+        </div>
+        
+        <div class="form-group">
+          <label for="endereco">Endereço*</label>
+          <input 
+            type="text" 
+            class="form-control" 
+            id="endereco" 
+            aria-describedby="endereco" 
+            placeholder="Digite Aqui"
+            formControlName="endereco"
+            maxlength="50"
+          >
+          <small *ngIf="formulario.get('endereco')?.touched && formulario.get('endereco')?.invalid" class="texto-erro">*Campo obrigatório</small>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary" (click)="salvar()" [disabled]="formulario.invalid || !formulario.dirty">Salvar</button>
+    </div>
+  </div>

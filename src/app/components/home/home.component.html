@@ -1,0 +1,29 @@
+<div class="home">
+  <div class="home__botao-incluir">
+    <button type="button" class="btn btn-primary" (click)="abrirModal()">Incluir Nova Editora</button>
+  </div>
+
+  <table class="table table-striped" *ngIf="listaEditoras.length > 0">
+    <thead>
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Endereço</th>
+        <th scope="col">Descrição</th>
+        <th scope="col">Editar</th>
+        <th scope="col">Excluir</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let editora of listaEditoras">
+        <td>{{ editora.nome }}</td>
+        <td>{{ editora.endereco }}</td>
+        <td>{{ editora.descricao }}</td>
+        <td><button type="button" class="btn btn-outline-success" (click)="abrirModal(editora)">Editar</button></td>
+        <td><button type="button" class="btn btn-outline-danger" (click)="excluir(editora)">Excluir</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p *ngIf="listaEditoras.length === 0">Por favor, inclua um novo registro.</p>
+
+</div>
