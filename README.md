@@ -1,27 +1,39 @@
 # Editoras
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.10.
+Este é um microfrontend com o CRUD de editoras feito em local storage.
 
-## Development server
+## 🚀 Começando
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Para iniciar a aplicação, executar o seguinte comando no terminal:
 
-## Code scaffolding
+Para instalar as dependências:
+```
+npm i
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Para abrir o servidor:
+```
+npm run start
+```
 
-## Build
+### 📋 Pré-requisitos
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+De que coisas você precisa para instalar o software e como instalá-lo?
 
-## Running unit tests
+* Angular 17
+* Node Package Manager 20
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+### 🔧 Instalação
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Para executar o projeto basta inserir os seguintes comandos em seu terminal:
 
-## Further help
+```
+npm i 
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+na sequência:
+
+```
+npm start
+```
